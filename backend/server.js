@@ -28,10 +28,12 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: '*', // Allow all origins (change to frontend IP if needed)
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ['Content-Type', 'Authorization']
-  }));
+  origin: 'https://fintree-finance.github.io', // <-- Your frontend GitHub Pages URL
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
+
   
   
   // Serve static files from React frontend
