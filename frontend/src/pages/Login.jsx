@@ -17,8 +17,8 @@ const Login = () => {
         e.preventDefault();
         try {
             const endpoint = isRegistering 
-                ? `${import.meta.env.VITE_API_BASE_URL}/api/auth/register`
-                : `${import.meta.env.VITE_API_BASE_URL}/api/auth/login`;
+                ? `https://fintree-lms-backend.onrender.com/api/auth/register`
+                : `https://fintree-lms-backend.onrender.com/api/auth/login`;
 
             const requestData = isRegistering ? { username, email, password } : { username, password };
 
