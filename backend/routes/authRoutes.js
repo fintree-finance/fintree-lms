@@ -27,7 +27,7 @@ router.post('/register', async (req, res) => {
                 return res.status(400).json({ message: 'Username already taken' });
             }
 
-            const insertQuery = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+            const insertQuery = "INSERT INTO users (id, username, email, password) VALUES (1, ?, ?, ?)";
             db.query(insertQuery, [username, email, hashedPassword], (err, result) => {
                 if (err) {
                     console.error("Error inserting user:", err);
