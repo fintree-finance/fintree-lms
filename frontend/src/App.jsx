@@ -52,7 +52,7 @@ import WCTLBLDisbursedLoans from "./components/WCTL-BLDisbursedLoans";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/fintree-lms">
       <Routes>
         {/* ✅ Public Route: Login */}
         <Route path="/" element={<Login />} />
